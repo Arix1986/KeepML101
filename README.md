@@ -25,28 +25,10 @@ En el módulo `app_main` se realiza lo siguiente:
 2. Se realiza una **predicción**.
 3. Se vuelve a **evaluar el modelo** para verificar su rendimiento.
 
-# 🏨 Estructura del Proyecto: Predicción del Precio de una Habitación
+## 🏨 Estructura del Proyecto: Predicción del Precio de una Habitación
 
+![Estructura](assets/estructura.png)
 
-📂 KeepMl101
-│
-├── 📄 README.md                   # Descripción general del proyecto
-│
-├── 📄 app_features.ipynb          # Análisis exploratorio y selección de características
-├── 📄 app_predict.ipynb           # Entrenamiento y evaluación de modelos
-├── 📄 app_main.ipynb              # Carga del modelo y predicción en tiempo real
-│
-├── 📄 preprocesing.py             # Funciones para el preprocesamiento de datos
-├── 📄 model.py                    # Clase `Model` con definiciones para el entrenamiento
-│
-├── 📂 data                        # Datos utilizados en el proyecto
-│   ├── 📄 airbnb_train.csv        # Datos de entrenamiento
-│   └── 📄 airbnb_test.csv         # Datos de prueba
-│
-└── 📂 models                      # Modelos entrenados guardados
-    ├── 📄 model_lightgbm.pkl      # Modelo LightGBM guardado
-    ├── 📄 model_xgboost.pkl       # Modelo XGBoost guardado
-    └── 📄 model_extratrees.pkl    # Modelo ExtraTrees guardado
 
 ## 🛠️ Tecnologías Utilizadas
 
