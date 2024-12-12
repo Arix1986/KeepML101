@@ -25,22 +25,20 @@ class Models:
             
             'LightGBM': {
                 'n_estimators': [100, 200, 500],
-                'learning_rate': (0.01, 0.3,'log-uniform'),
+                'learning_rate': [0.01, 0.02, 0.03,0.04 ,0.05, 0.1],
                'num_leaves': [20, 31, 50, 100],
                 'max_depth': [-1, 5, 9, 12],
-                'feature_fraction': (0.6, 1.0, 'uniform')
+                
             },
             'XGBoost': {
                 'n_estimators': [100, 200, 500],
-                'learning_rate': (0.02, 0.4, 'log-uniform'),
+                'learning_rate': (0.01,0.02, 0.03,0.05,0.1,0.2,0.3,0.4 ),
                 'max_depth': [5,9, 10, 12],
-                'subsample': (0.6, 1.0, 'uniform'),
-                'colsample_bytree': (0.6, 1.0, 'uniform')
             },
             'GradientBoosting': {
                 'n_estimators': [100, 200, 500],
-                'learning_rate': (0.01, 0.4, 'log-uniform'),
-                'max_depth': [3, 9, 12],
+                 'learning_rate': (0.01,0.02, 0.03,0.05,0.1,0.2,0.3,0.4 ),
+                'max_depth': [3,5, 9, 12],
                 'min_samples_split': [2, 5,8],
                 'min_samples_leaf': [1, 2, 4]
             },
