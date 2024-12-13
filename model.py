@@ -15,12 +15,13 @@ class Models:
         self.X_test = None
         self.y_test = None
         self.reg = {
-               'ExtraTrees':ExtraTreesRegressor(random_state=42),
+               
                'LightGBM':LGBMRegressor(force_row_wise=True,random_state=42),
-              'GradientBoosting': GradientBoostingRegressor(random_state=42),
-              'XGBoost': XGBRegressor(random_state=42),
-              'BagginRegressor_KN':BaggingRegressor(estimator=KNeighborsRegressor(),random_state=42),
-              'BagginRegressor_DT':BaggingRegressor(estimator=DecisionTreeRegressor(),random_state=42),
+               'GradientBoosting': GradientBoostingRegressor(random_state=42),
+               'XGBoost': XGBRegressor(random_state=42),
+               'BagginRegressor_KN':BaggingRegressor(estimator=KNeighborsRegressor(),random_state=42),
+               'BagginRegressor_DT':BaggingRegressor(estimator=DecisionTreeRegressor(),random_state=42),
+               'ExtraTrees':ExtraTreesRegressor(random_state=42),
             
             
            
@@ -31,9 +32,9 @@ class Models:
             'LightGBM': {
                 'boosting_type': ['dart'],
                 'learning_rate': [0.01, 0.02, 0.03,0.032,0.04 ,0.05, 0.1],
-                'n_estimators': [500],
+                'n_estimators': [500,600],
                 'num_leaves': [21, 31,41, 53],
-                'max_depth': [ 7,9,10,11,12],
+                'max_depth': [ 5,10,11,9],
                 'min_child_samples':[20],
                 'min_child_weight':[0.001],
                 'reg_alpha': [0.0], 
@@ -47,9 +48,9 @@ class Models:
             
             },
             'GradientBoosting': {
-                'n_estimators': [100, 200, 300,500],
+                'n_estimators': [200, 300,500,600],
                 'learning_rate': (0.01,0.02, 0.03,0.05,0.1,0.2,0.3,0.4 ),
-                'max_depth': [3, 5,9, 12],
+                'max_depth': [3, 5,9,10 ,12],
                 
             },
             'BagginRegressor_KN': {
@@ -65,11 +66,10 @@ class Models:
                 'bootstrap': [True, False],                   
                 'bootstrap_features': [True, False],           
              },
-             
-            'ExtraTrees': {
+              'ExtraTrees': {
                  'n_estimators': [100, 200, 300,500],
                 'ccp_alpha': (0.01,0.02, 0.03,0.05,0.1,0.2,0.3,0.4 ),
-                'max_depth': [3, 5,9, 12],
+                'max_depth': [5,9,10, 12],
              },  
           
         }

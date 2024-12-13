@@ -533,7 +533,6 @@ def plot_histograms(df, bins=20):
     plt.tight_layout()
     plt.show()
 
-def save_label_encoder(encodes):
-    for code in encodes.keys():
-       with open(f'models/label_encoder_{code}.pkl', 'wb') as le_file:
-          pickle.dump(encodes[code], le_file)    
+def save_inputer_model(model):
+    with open(f'models/numeric_inputer.pkl', 'wb') as le_file:
+          pickle.dump(model, le_file)    
